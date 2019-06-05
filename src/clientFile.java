@@ -5,6 +5,7 @@ public class clientFile {
         Socket s = new Socket("127.0.0.1",6666);
         File f = new File("C:/哇哈哈6.txt");
         InputStream is = s.getInputStream();
+        //从client端的向外输出
         FileOutputStream fos = new FileOutputStream(f);
         byte buf [] = new byte[100];
         int i = 0;

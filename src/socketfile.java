@@ -1,6 +1,5 @@
-import java.io.*;
-import java.net.ServerSocket;
-import java.net.Socket;
+import  java.io.*;
+import java.net.*;
 public class socketfile {
     public static void main (String agrs [])throws  Exception {
         ServerSocket s = new ServerSocket(6666);
@@ -9,12 +8,12 @@ public class socketfile {
         OutputStream os = ss.getOutputStream();
         FileInputStream fis = new FileInputStream(f);
         byte buf[] = new byte[100];
-        int i = 0;
-        while ((i = fis.read(buf)) != -1) {
-            os.write(buf, 0, i);
+        int i = 0 ;
+        while ((i =fis.read(buf))!=-1 ){
+        os.write(buf,0,i);
         }
         os.close();
         fis.close();
-    }
+   }
 }
 

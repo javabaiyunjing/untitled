@@ -16,4 +16,3 @@ public class socketfile {
         fis.close();
    }
 }
-

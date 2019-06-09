@@ -2,22 +2,14 @@ import java.io.*;
 import java.net.*;
 public class  TeatTCPServer{
     public static void   main (String agrs[]) throws Exception{
-        ServerSocket ss = new ServerSocket(6666);
+        ServerSocket s = new ServerSocket(6688);
+        Socket ss = new Socket();
         while (true) {
-            Socket s = ss.accept();
-            DataInputStream dis =  new DataInputStream(s.getInputStream());
+            InputStream is =ss.getInputStream();
+            DataInputStream dis = new DataInputStream(is);
             System.out.println(dis.readUTF());
-            while( true) {
-                OutputStream os = s.getOutputStream();
-                DataOutputStream dos = new DataOutputStream(os);
-                dos.writeUTF("Server ：加油");
-                s.close();
-                dis.close();
-                os.close();
-                dos.close();
-                dos.flush();
-                ss.close();
-            }
+            is.close();
+            dis.close();
         }
     }
 }

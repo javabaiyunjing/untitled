@@ -1,14 +1,12 @@
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
 public class TeatwindowAdapter {
     public static void main(String[] args) {
         new MyFrame2("www.xin.cn");
     }
 }
-class MyFrame2 extends Frame { 
-
+class MyFrame2 extends Frame {
     MyFrame2 (String s){
         super(s);
         setLayout(null);
@@ -17,10 +15,9 @@ class MyFrame2 extends Frame {
         setVisible(true);
        addWindowListener(new MyWindow());
     }
-
     class MyWindow extends WindowAdapter {
         public void windowClosing(WindowEvent e) {
-            setVisible(false);
+            setVisible(false);//关闭图像
             System.exit(0);
         }
     }

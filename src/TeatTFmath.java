@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 public class TeatTFmath {
     public static void main(String[] args) {
         TF tf = new TF();
-        tf.setBounds(520,200,200,200);
+        tf.setBounds(220,200,200,200);
         tf.launchFrame();
 
     }

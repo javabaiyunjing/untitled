@@ -5,9 +5,8 @@ public class UDPServer {
         DatagramPacket dp = new DatagramPacket(buf,buf.length);//创建一个数据包，
         DatagramSocket ds = new DatagramSocket(5788);
         while(true) {
-            ds.receive(dp);
+            ds.receive(dp);//接收其他人发的数据，并放在数据包内，receive是阻塞式
             System.out.println(new String(buf,0,dp.getLength()));
         }
-
     }
 }
